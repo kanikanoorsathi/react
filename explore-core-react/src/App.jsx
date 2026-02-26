@@ -1,18 +1,22 @@
 import './App.css'
+import ToDO from './Todo';
 
 function App() {
 
   return (
     <>
       <h1>Vite + React</h1>
-      <Developer name="Mozumder" tech="JS"></Developer>
+      <ToDO task="Learn React" isDone={true}></ToDO>
+      <ToDO task="Revise Js" isDone={false}></ToDO>
+      <ToDO task="Take a shower" isDone={true}></ToDO>
+      {/* <Developer name="Mozumder" tech="JS"></Developer>
       <Developer name="Rajon" tech="python"></Developer>
       <Developer name="Shabana" tech="Java"></Developer>
       <Player name= "tamim" run= "5000"></Player>
       <Player name= "mushi" run= "5000"></Player>
       <Salami event= "Roja Eid" amount="20"></Salami>
       <Salami event= "Graduation"></Salami>
-      
+       */}
     </>
   )
 }
