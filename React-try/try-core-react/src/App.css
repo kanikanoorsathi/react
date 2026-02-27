@@ -40,7 +40,7 @@
 .read-the-docs {
   color: #888;
 }
-.student{
+.student, .lib{
   margin: 10px;
   padding: 10px;
   border: 3px solid orange;

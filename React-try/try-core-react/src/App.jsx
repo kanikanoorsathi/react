@@ -1,13 +1,21 @@
 import './App.css'
 //import ToDO from './TryTodo';
 import TryToDo from './TryTodo';
+import Library from './Library'
 
 function App() {
   const time = 50
+  const books = [
+    { id:1, name: 'Physics', price: 250} ,
+    { id:2, name: 'Chemistyry', price: 350 },
+    { id:3, name: 'Math', price: 255 },
+    { id:4, name: 'Biology', price: 290 },
+  ]
 
   return (
     <>
       <h1>React Core concepts</h1>
+      <Library books={books}></Library>
       
       <TryToDo task="Learn React" isDone={true} time={time}></TryToDo>
       <TryToDo task="Revise Js" isDone={false}></TryToDo>
