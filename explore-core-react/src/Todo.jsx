@@ -1,4 +1,4 @@
-// function ToDO({task, isDone}){
+//export default function ToDO({task, isDone}){
 //     return(
 //         <li>Task: {task}</li>
 //     )
