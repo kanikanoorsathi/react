@@ -11,7 +11,8 @@ function App() {
       
       <TryToDo task="Learn React" isDone={true} time={time}></TryToDo>
       <TryToDo task="Revise Js" isDone={false}></TryToDo>
-      <TryToDo task="Take a shower" isDone={true} time="100"></TryToDo> 
+      {/* <TryToDo task="Take a shower" isDone={true} time="100"></TryToDo>  */}
+      <TryToDo task="Take a shower" isDone={true} time=""></TryToDo> 
     
       {/* <ToDO task="Learn React" isDone={true}></ToDO>
       <ToDO task="Revise Js" isDone={false}></ToDO>
