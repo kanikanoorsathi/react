@@ -1,33 +1,30 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
+import { Suspense } from 'react'
+import './App.css'
+import Bottles from './components/Bottles/Bottles'
+
+
+// const bottlesPromise = fetch('./bottles.json')
+//   .then(res => res.json());
+
+const bottlesPromise = fetch('bottles.json') .then(res => res.json())
 function App() {
-  const [count, setCount] = useState(0)
+
+  // const bottles = [
+  //   {id: 1, name: 'Pink Nike Bottle', pice: 250, color: 'pink' },
+  //   {id: 2, name: 'Black Nike Bottle', pice: 250, color: 'Black' },
+  //   {id: 3, name: 'Blue Nike Bottle', pice: 250, color: 'Blue' },
+  //   {id: 4, name: 'White Nike Bottle', pice: 250, color: 'White' },
+  // ]
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
+      <h1>Buy Awesome Water Bottle</h1>
+      <Suspense fallback={<h3>Bottles are loading....</h3>}>
+        <Bottles bottlesPromise={bottlesPromise}></Bottles>
+      </Suspense>
+     
     </>
   )
 }
